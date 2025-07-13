@@ -23,7 +23,7 @@ jobs:
           21
 
     - name: Setup Gradle
-      uses: gradle/actions/setup-gradle@v3
+      uses: gradle/actions/setup-gradle@v4
 
     - name: Get version from gradle.properties
       run: |
@@ -38,7 +38,7 @@ jobs:
 
     - uses: actions/upload-artifact@v4
       with:
-        name: pv-addon-discs
+        name: pv-addon-request-resend
         path: |
           build/libs/*.jar
           !build/libs/*-@(sources).jar
